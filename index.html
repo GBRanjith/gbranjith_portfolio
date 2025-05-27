@@ -975,6 +975,18 @@
                 radial-gradient(circle at 70% 80%, rgba(0, 212, 170, 0.3) 0%, transparent 50%);
         }
 
+        .contact .section-title h2 {
+            color: var(--accent);
+            background: linear-gradient(135deg, var(--accent), #00a8cc);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .contact .section-title p {
+            color: rgba(255,255,255,0.8);
+        }
+
         .contact-content {
             display: grid;
             grid-template-columns: 1fr 1fr;
@@ -1683,6 +1695,266 @@
                 box-shadow: none !important;
             }
         }
+
+        /* Achievements Section Styles */
+        .achievements {
+            background: var(--gray-light);
+            padding: 6rem 0;
+        }
+
+        .achievements-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 2rem;
+            margin-top: 3rem;
+        }
+
+        .achievement-card {
+            background: var(--light);
+            padding: 2.5rem 2rem;
+            border-radius: var(--border-radius);
+            text-align: center;
+            box-shadow: var(--shadow-soft);
+            transition: var(--transition);
+            position: relative;
+            overflow: hidden;
+        }
+
+        .achievement-card::before {
+            content: '';
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 4px;
+            background: var(--gradient-primary);
+        }
+
+        .achievement-card:hover {
+            transform: translateY(-10px);
+            box-shadow: var(--shadow-medium);
+        }
+
+        .achievement-icon {
+            font-size: 2.5rem;
+            color: var(--primary);
+            margin-bottom: 1.5rem;
+        }
+
+        .achievement-card h3 {
+            color: var(--dark);
+            font-size: 1.4rem;
+            margin-bottom: 0.5rem;
+            font-weight: 700;
+        }
+
+        .achievement-title {
+            color: var(--primary);
+            font-weight: 600;
+            margin-bottom: 0.5rem;
+        }
+
+        .achievement-date {
+            color: var(--gray);
+            font-size: 0.9rem;
+        }
+
+        @media (max-width: 768px) {
+            .achievements-grid {
+                grid-template-columns: 1fr;
+            }
+        }
+
+        /* App Store Achievements Section Styles */
+        .app-achievements {
+            background: var(--dark-light);
+            padding: 6rem 0;
+            color: white;
+            position: relative;
+            overflow: hidden;
+            margin-top: 0;
+        }
+
+        .app-achievements .section-title h2 {
+            color: white;
+            background: linear-gradient(45deg, #ffffff, #e0e0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .app-achievements .section-title p {
+            color: rgba(255,255,255,0.9);
+        }
+
+        .app-achievements .section-title h2::after {
+            background: var(--gradient-accent);
+        }
+
+        .achievement-content {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            gap: 4rem;
+            position: relative;
+            z-index: 2;
+            margin-top: 3rem;
+        }
+
+        .store-stats {
+            display: flex;
+            gap: 3rem;
+            flex: 1;
+            justify-content: center;
+        }
+
+        .store-stat {
+            text-align: center;
+            padding: 2rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 20px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: var(--transition);
+            min-width: 200px;
+        }
+
+        .store-stat:hover {
+            transform: translateY(-5px);
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .store-icon {
+            width: 60px;
+            height: 60px;
+            background: rgba(255,255,255,0.2);
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            margin: 0 auto 1rem;
+            position: relative;
+        }
+
+        .store-icon i {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            font-size: 1.8rem;
+            color: white;
+        }
+
+        .store-stat .count {
+            display: block;
+            font-size: 2.5rem;
+            font-weight: 800;
+            margin-bottom: 0.5rem;
+            background: linear-gradient(45deg, #ffffff, #e0e0e0);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+        }
+
+        .store-stat .label {
+            font-size: 1.1rem;
+            opacity: 0.9;
+            font-weight: 600;
+        }
+
+        .achievement-badges {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            flex: 1;
+        }
+
+        .badge {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1.2rem 1.5rem;
+            background: rgba(255,255,255,0.1);
+            border-radius: 15px;
+            backdrop-filter: blur(10px);
+            border: 1px solid rgba(255,255,255,0.2);
+            transition: var(--transition);
+        }
+
+        .badge:hover {
+            transform: translateX(10px);
+            background: rgba(255,255,255,0.15);
+            box-shadow: 0 10px 30px rgba(0,0,0,0.2);
+        }
+
+        .badge i {
+            font-size: 1.5rem;
+            color: var(--accent);
+        }
+
+        .badge span {
+            font-size: 1.1rem;
+            font-weight: 600;
+        }
+
+        @media (max-width: 1024px) {
+            .achievement-content {
+                flex-direction: column;
+                text-align: center;
+                gap: 3rem;
+            }
+
+            .store-stats {
+                justify-content: center;
+            }
+
+            .achievement-badges {
+                width: 100%;
+            }
+
+            .badge {
+                justify-content: center;
+            }
+        }
+
+        @media (max-width: 768px) {
+            .store-stats {
+                flex-direction: column;
+                gap: 1.5rem;
+            }
+
+            .store-stat {
+                min-width: 180px;
+            }
+        }
+
+        @media (max-width: 480px) {
+            .app-achievements {
+                padding: 4rem 0;
+            }
+
+            .store-stat {
+                padding: 1.5rem;
+            }
+
+            .store-icon {
+                width: 50px;
+                height: 50px;
+            }
+
+            .store-icon i {
+                font-size: 1.5rem;
+            }
+
+            .badge {
+                padding: 1rem;
+            }
+
+            .badge span {
+                font-size: 1rem;
+            }
+        }
     </style>
 </head>
 <body>
@@ -1714,7 +1986,10 @@
                 mVaaHna: "https://play.google.com/store/apps/details?id=com.isteer.mvaahna&pcampaignid=web_share", 
                 BillPlus: "https://github.com/GBRanjith/BillPlus",
                 sVaaHna: "https://play.google.com/store/apps/details?id=com.isteer.svaahna&pcampaignid=web_share", 
-                "Rido Taxi": "https://apps.apple.com/in/app/rapido-bike-taxi-auto-cabs/id1198464606"
+                "Raido Taxi": "https://apps.apple.com/in/app/raido/id6743036332",
+                Kaaryan: "https://play.google.com/store/apps/details?id=com.vaahna.kaaryan&pcampaignid=web_share",
+                VaaHna: "https://play.google.com/store/apps/details?id=com.isteer.vaahna&pcampaignid=web_share",
+                "M-Connect": "https://apps.apple.com/in/app/isteer-m-connect/id6444562377"
             },
             
             // Social Media Links
@@ -1793,15 +2068,15 @@
                 const subject = formData.subject || 'Contact from Portfolio';
                 const body = `Hi Ranjith,
 
-Name: ${formData.name}
-Email: ${formData.email}
-Subject: ${formData.subject}
+                Name: ${formData.name}
+                Email: ${formData.email}
+                Subject: ${formData.subject}
 
-Message:
-${formData.message}
+                Message:
+                ${formData.message}
 
-Best regards,
-${formData.name}`;
+                Best regards,
+                ${formData.name}`;
                 
                 const mailtoUrl = `mailto:${email}?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
                 window.open(mailtoUrl);
@@ -1855,9 +2130,9 @@ ${formData.name}`;
                     <span class="wave">👋</span> Hello, I'm
                 </div>
                 <h1>Boopathy <span class="highlight">Ranjith</span></h1>
-                <div class="hero-subtitle">Mobile App Developer & Flutter Specialist</div>
+                <div class="hero-subtitle">Mobile App Developer (Flutter)</div>
                 <p class="hero-description">
-                    Crafting beautiful, scalable cross-platform mobile applications with 2.6 years of Flutter expertise and 4.6 years of overall development experience. Specialized in real-time integrations and API-driven architectures.
+                    Crafting beautiful, scalable cross-platform mobile applications with 2.6 years of Flutter expertise and 4.6 years of overall development experience. Comfortable working with real-time features, API integration, and building clean, maintainable app architectures. Always eager to learn and improve with every project
                 </p>
                 <div class="hero-buttons">
                     <a href="#projects" class="btn btn-primary">
@@ -1917,7 +2192,7 @@ ${formData.name}`;
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">Location</span>
-                            <span class="detail-value">Nazareth, Thoothukudi, Tamil Nadu</span>
+                            <span class="detail-value">Chennai, Tamil Nadu</span>
                         </div>
                         <div class="detail-item">
                             <span class="detail-label">Availability</span>
@@ -2038,16 +2313,40 @@ ${formData.name}`;
                     </div>
                     <div class="project-body">
                         <p class="project-description">
-                            Advanced inventory management system for auto spare parts (2W/4W). Features real-time inventory tracking, parts categorization, vendor management, and multi-location warehouse support. Currently used by active garages and service networks.
+                            Advanced inventory management system for auto spare parts (2W/4W). Features real-time stock tracking, vendor management, parts categorization, and multi-location warehouse support. Includes search, filtering, and live warehouse updates.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Flutter</span>
                             <span class="tech-tag">BLoC</span>
-                            <span class="tech-tag">Real-time DB</span>
-                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Inappwebview</span>
                         </div>
                         <div class="project-links">
                             <button onclick="handleAction('viewProject', 'rVaaHna')" class="project-link primary">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-header">
+                        <h3><i class="fas fa-wrench"></i> mVaaHna</h3>
+                        <div class="project-date">Dec 2023 – Present</div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Comprehensive service CRM for mechanics with job card management, automated invoicing, appointment scheduling, and maintenance history tracking. Designed to reduce paperwork and increase efficiency.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">GetX</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Floor DB</span>
+                            <span class="tech-tag">Facebook SDK</span>
+                            <span class="tech-tag">UPI</span>
+                        </div>
+                        <div class="project-links">
+                            <button onclick="handleAction('viewProject', 'mVaaHna')" class="project-link primary">
                                 <i class="fas fa-external-link-alt"></i> View Project
                             </button>
                         </div>
@@ -2069,6 +2368,9 @@ ${formData.name}`;
                             <span class="tech-tag">MongoDB</span>
                             <span class="tech-tag">Claude AI</span>
                             <span class="tech-tag">Socket.IO</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Firebase Auth</span>
+                            <span class="tech-tag">Cloudinary</span>
                         </div>
                         <div class="project-links">
                             <button onclick="handleAction('viewProject', '3BeeCrackers')" class="project-link primary">
@@ -2080,21 +2382,21 @@ ${formData.name}`;
 
                 <div class="project-card reveal">
                     <div class="project-header">
-                        <h3><i class="fas fa-wrench"></i> mVaaHna</h3>
-                        <div class="project-date">Dec 2023 – Present</div>
+                        <h3><i class="fas fa-taxi"></i> Raido Taxi</h3>
+                        <div class="project-date">Apr 14 – Apr 16, 2025</div>
                     </div>
                     <div class="project-body">
                         <p class="project-description">
-                            Comprehensive service CRM for mechanics with job card management, automated invoicing, appointment scheduling, and maintenance history tracking. Streamlines operations and reduces paperwork significantly.
+                            Rapido-style iOS taxi app for Chill City Technology. Worked on critical iOS bug fixes, ride-tracking optimization, and performance improvements for app relaunch in competitive market.
                         </p>
                         <div class="project-tech">
-                            <span class="tech-tag">Flutter</span>
-                            <span class="tech-tag">GetX</span>
-                            <span class="tech-tag">Firebase</span>
-                            <span class="tech-tag">Hive</span>
+                            <span class="tech-tag">Swift</span>
+                            <span class="tech-tag">iOS</span>
+                            <span class="tech-tag">Firebase Auth</span>
+                            <span class="tech-tag">Real-time Tracking</span>
                         </div>
                         <div class="project-links">
-                            <button onclick="handleAction('viewProject', 'mVaaHna')" class="project-link primary">
+                            <button onclick="handleAction('viewProject', 'Raido Taxi')" class="project-link primary">
                                 <i class="fas fa-external-link-alt"></i> View Project
                             </button>
                         </div>
@@ -2108,13 +2410,13 @@ ${formData.name}`;
                     </div>
                     <div class="project-body">
                         <p class="project-description">
-                            GST billing and inventory SaaS solution designed for small businesses. Features barcode scanning, stock alerts, multi-user access, automated GST calculations, and comprehensive reporting.
+                            GST billing and inventory SaaS solution for RelySoftware Solution. Features barcode scanning, stock alerts, multi-user access, automated GST calculations, and comprehensive reporting.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Flutter</span>
                             <span class="tech-tag">GetX</span>
                             <span class="tech-tag">PDF Generation</span>
-                            <span class="tech-tag">Barcode Scanner</span>
+                            <span class="tech-tag">Pagination</span>
                         </div>
                         <div class="project-links">
                             <button onclick="handleAction('viewProject', 'BillPlus')" class="project-link primary">
@@ -2131,7 +2433,7 @@ ${formData.name}`;
                     </div>
                     <div class="project-body">
                         <p class="project-description">
-                            Vehicle marketplace platform for buying, selling, and consulting on cars & bikes. Features multi-role authentication, international deployment capabilities, and trusted buyer-seller connections.
+                            Vehicle marketplace platform connecting buyers, sellers, and consultants in the automotive space. Features multi-role access with UI tailored to each user type, supporting international deployment capabilities.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Flutter</span>
@@ -2149,21 +2451,68 @@ ${formData.name}`;
 
                 <div class="project-card reveal">
                     <div class="project-header">
-                        <h3><i class="fas fa-taxi"></i> Rido Taxi</h3>
-                        <div class="project-date">Apr 14 – Apr 16, 2025</div>
+                        <h3><i class="fas fa-file-invoice"></i> Kaaryan</h3>
+                        <div class="project-date">May 2024 – Aug 2024</div>
                     </div>
                     <div class="project-body">
                         <p class="project-description">
-                            Ride-hailing application similar to Rapido. Worked on critical iOS bug fixes, ride-tracking optimization, and performance improvements for app relaunch in competitive market.
+                            Comprehensive invoicing app for service providers with custom invoice generation, customer management, PDF export capabilities, and detailed history tracking.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">GetX</span>
+                            <span class="tech-tag">PDF Generation</span>
+                            <span class="tech-tag">Firebase</span>
+                            <span class="tech-tag">Dashboards</span>
+                        </div>
+                        <div class="project-links">
+                            <button onclick="handleAction('viewProject', 'Kaaryan')" class="project-link primary">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-header">
+                        <h3><i class="fas fa-book"></i> VaaHna</h3>
+                        <div class="project-date">Aug 2023 – Dec 2023</div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Digital vehicle logbook application tracking fuel efficiency, maintenance schedules, and trip logs. Designed for both personal and fleet vehicle owners with comprehensive reporting features.
+                        </p>
+                        <div class="project-tech">
+                            <span class="tech-tag">Flutter</span>
+                            <span class="tech-tag">GetX</span>
+                            <span class="tech-tag">Method Channel</span>
+                            <span class="tech-tag">Charts</span>
+                            <span class="tech-tag">Analytics</span>
+                        </div>
+                        <div class="project-links">
+                            <button onclick="handleAction('viewProject', 'VaaHna')" class="project-link primary">
+                                <i class="fas fa-external-link-alt"></i> View Project
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="project-card reveal">
+                    <div class="project-header">
+                        <h3><i class="fas fa-network-wired"></i> M-Connect</h3>
+                        <div class="project-date">Nov 2022 – Apr 2023</div>
+                    </div>
+                    <div class="project-body">
+                        <p class="project-description">
+                            Pan-India mechanic network platform for iOS connecting mechanics and enhancing their visibility. Features comprehensive user onboarding and profile management systems.
                         </p>
                         <div class="project-tech">
                             <span class="tech-tag">Swift</span>
                             <span class="tech-tag">iOS</span>
                             <span class="tech-tag">Maps API</span>
-                            <span class="tech-tag">Real-time Tracking</span>
                         </div>
                         <div class="project-links">
-                            <button onclick="handleAction('viewProject', 'Rido Taxi')" class="project-link primary">
+                            <button onclick="handleAction('viewProject', 'M-Connect')" class="project-link primary">
                                 <i class="fas fa-external-link-alt"></i> View Project
                             </button>
                         </div>
@@ -2172,6 +2521,54 @@ ${formData.name}`;
             </div>
         </div>
     </section>
+
+    <!-- Achievements Section -->
+    <section id="achievements" class="achievements">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>Achievements & Certifications</h2>
+                <p>Recognition and professional development milestones</p>
+            </div>
+            <div class="achievements-grid">
+                <div class="achievement-card reveal">
+                    <div class="achievement-icon">
+                        <i class="fas fa-trophy"></i>
+                    </div>
+                    <h3>Best Paper Award</h3>
+                    <p class="achievement-title">"LIFI: Advance WiFi Communication"</p>
+                    <p class="achievement-date">National Level Conference – Mar 16, 2018</p>
+                </div>
+
+                <div class="achievement-card reveal">
+                    <div class="achievement-icon">
+                        <i class="fas fa-project-diagram"></i>
+                    </div>
+                    <h3>Final Year Project</h3>
+                    <p class="achievement-title">College Library Management System</p>
+                    <p class="achievement-date">2019 - 2020</p>
+                </div>
+
+                <div class="achievement-card reveal">
+                    <div class="achievement-icon">
+                        <i class="fas fa-certificate"></i>
+                    </div>
+                    <h3>Advanced Diploma</h3>
+                    <p class="achievement-title">JAVA Technology</p>
+                    <p class="achievement-date">Apr 2022 – Jul 2022</p>
+                </div>
+
+                <div class="achievement-card reveal">
+                    <div class="achievement-icon">
+                        <i class="fas fa-palette"></i>
+                    </div>
+                    <h3>Graphic Design</h3>
+                    <p class="achievement-title">Professional Certification</p>
+                    <p class="achievement-date">Jul 2018 – Aug 2018</p>
+                </div>
+            </div>
+        </div>
+    </section>
+>
 
     <!-- Experience Section -->
     <section id="experience" class="experience">
@@ -2301,6 +2698,44 @@ ${formData.name}`;
         </div>
     </section>
 
+
+    <!-- App Store Achievements Section -->
+    <section class="app-achievements">
+        <div class="container">
+            <div class="section-title reveal">
+                <h2>App Deployment Success</h2>
+                <p>Successfully deployed 7 applications across major app stores, demonstrating expertise in both Android and iOS development</p>
+            </div>
+            <div class="achievement-content">
+                <div class="store-stats">
+                    <div class="store-stat">
+                        <div class="store-icon">
+                            <i class="fab fa-google-play"></i>
+                        </div>
+                        <span class="count">7</span>
+                        <span class="label">Google Play Apps</span>
+                    </div>
+                    <div class="store-stat">
+                        <div class="store-icon">
+                            <i class="fab fa-apple"></i>
+                        </div>
+                        <span class="count">7</span>
+                        <span class="label">App Store Apps</span>
+                    </div>
+                </div>
+                <div class="achievement-badges">
+                    <div class="badge">
+                        <i class="fas fa-check-circle"></i>
+                        <span>100% App Store Compliance</span>
+                    </div>
+                    <div class="badge">
+                        <i class="fas fa-code-branch"></i>
+                        <span>Cross-Platform Expertise</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section >
     <!-- Footer -->
     <footer>
         <div class="container">
